@@ -1,0 +1,22 @@
+@model BibliotecaMVC.Models.Prestamo
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+<h2>Editar Préstamo</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="PrestamoID" />
+    <div class="form-group">
+        <label asp-for="FechaDevolucion" class="control-label">Fecha de Devolución</label>
+        <input asp-for="FechaDevolucion" class="form-control" type="date" min="@DateTime.Now.ToString("yyyy-MM-dd")" />
+        <span asp-validation-for="FechaDevolucion" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Estado" class="control-label">Estado</label>
+        <select asp-for="Estado" class="form-control" asp-items="ViewBag.Estados"></select>
+        <span asp-validation-for="Estado" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>

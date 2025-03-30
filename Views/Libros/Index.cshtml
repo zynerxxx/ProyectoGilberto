@@ -1,0 +1,39 @@
+@model IEnumerable<BibliotecaMVC.Models.Libro>
+
+<h2>Libros</h2>
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Crear Nuevo Libro</a>
+    </p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>ISBN</th>
+            <th>Editorial</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Titulo</td>
+                <td>@item.ISBN</td>
+                <td>@item.Editorial</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.LibroID" class="btn btn-info">Detalles</a>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.LibroID" class="btn btn-warning">Editar</a>
+                        <a asp-action="Delete" asp-route-id="@item.LibroID" class="btn btn-danger">Eliminar</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

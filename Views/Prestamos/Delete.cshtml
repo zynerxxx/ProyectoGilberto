@@ -1,0 +1,24 @@
+@model BibliotecaMVC.Models.Prestamo
+
+<h2>Eliminar Préstamo</h2>
+
+<h3>¿Está seguro de que desea eliminar este préstamo?</h3>
+<div>
+    <h4>Préstamo</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Libro</dt>
+        <dd class="col-sm-10">@Model.Libro?.Titulo ?? "Información no disponible"</dd>
+
+        <dt class="col-sm-2">Fecha de Préstamo</dt>
+        <dd class="col-sm-10">@Model.FechaPrestamo.ToShortDateString()</dd>
+
+        <dt class="col-sm-2">Estado</dt>
+        <dd class="col-sm-10">@Model.Estado</dd>
+    </dl>
+</div>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="PrestamoID" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

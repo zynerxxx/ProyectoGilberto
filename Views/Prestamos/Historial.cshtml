@@ -1,0 +1,42 @@
+@model IEnumerable<BibliotecaMVC.Models.Prestamo>
+
+<h2>Historial de Préstamos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Libro</th>
+            <th>Usuario</th>
+            <th>Fecha de Préstamo</th>
+            <th>Fecha de Devolución</th>
+            <th>Fecha Devuelto</th> <!-- Nueva columna -->
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var prestamo in Model)
+        {
+            <tr>
+                <td>@prestamo.Libro?.Titulo</td>
+                <td>@prestamo.Usuario?.Nombre</td>
+                <td>@prestamo.FechaPrestamo.ToShortDateString()</td>
+                <td>@prestamo.FechaDevolucion?.ToShortDateString()</td>
+                <td>
+                    @if (prestamo.FechaDevuelto.HasValue)
+                    {
+                        @prestamo.FechaDevuelto.Value.ToShortDateString()
+                    }
+                    else
+                    {
+                        <span class="text-muted">No devuelto</span>
+                    }
+                </td>
+                <td>@prestamo.Estado</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</p>

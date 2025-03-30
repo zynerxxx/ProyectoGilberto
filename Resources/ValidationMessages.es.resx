@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="RequiredAttribute_ValidationError" xml:space="preserve">
+    <value>El campo {0} es obligatorio.</value>
+  </data>
+</root>

@@ -1,0 +1,58 @@
+@model IEnumerable<BibliotecaMVC.Models.Prestamo>
+
+<h2>Préstamos</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Historial" class="btn btn-primary">Historial de Préstamos</a>
+    </p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Libro</th>
+            <th>Fecha de Préstamo</th>
+            <th>Fecha de Devolución</th>
+            <th>Estado</th>
+            @if (User.IsInRole("Admin"))
+            {
+                <th>Acciones</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var prestamo in Model)
+        {
+            <tr>
+                <td>@prestamo.Libro?.Titulo</td>
+                <td>@prestamo.FechaPrestamo.ToShortDateString()</td>
+                <td>@prestamo.FechaDevolucion?.ToShortDateString()</td>
+                <td>@prestamo.Estado</td>
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@prestamo.PrestamoID" class="btn btn-warning btn-sm">Editar</a>
+                        <a asp-action="Delete" asp-route-id="@prestamo.PrestamoID" class="btn btn-danger btn-sm">Eliminar</a>
+                        @if (prestamo.Estado != "Devuelto")
+                        {
+                            <form asp-action="MarkAsReturned" asp-route-id="@prestamo.PrestamoID" method="post" class="d-inline">
+                                <button type="submit" class="btn btn-success btn-sm">Marcar como Devuelto</button>
+                            </form>
+                        }
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

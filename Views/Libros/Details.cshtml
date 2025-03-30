@@ -1,0 +1,52 @@
+@model BibliotecaMVC.Models.Libro
+
+@if (Model != null)
+{
+    <h2>Detalles del Libro</h2>
+
+    <div>
+        <h4>Libro</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">Título</dt>
+            <dd class="col-sm-10">@Model.Titulo</dd>
+
+            <dt class="col-sm-2">ISBN</dt>
+            <dd class="col-sm-10">@Model.ISBN</dd>
+
+            <dt class="col-sm-2">Editorial</dt>
+            <dd class="col-sm-10">@Model.Editorial</dd>
+
+            <dt class="col-sm-2">Autor</dt>
+            <dd class="col-sm-10">@Model.Autor?.Nombre @Model.Autor?.Apellido</dd>
+
+            <dt class="col-sm-2">Categoría</dt>
+            <dd class="col-sm-10">@Model.Categoria?.Nombre</dd>
+
+            <dt class="col-sm-2">Número de Copias</dt>
+            <dd class="col-sm-10">@Model.NumeroCopias</dd>
+        </dl>
+    </div>
+
+    <div class="d-flex justify-content-start gap-2 mt-3">
+        <a asp-action="Index" asp-controller="Libros" class="btn btn-secondary">Volver</a>
+        @if (User.IsInRole("Admin"))
+        {
+            <form asp-action="Create" asp-controller="Prestamos" method="get" class="d-inline">
+                <input type="hidden" name="libroId" value="@Model.LibroID" />
+                <button type="submit" class="btn btn-primary">Realizar Préstamo</button>
+            </form>
+        }
+        else if (User.Identity != null && User.Identity.IsAuthenticated)
+        {
+            <form asp-action="Create" asp-controller="Prestamos" method="get" class="d-inline">
+                <input type="hidden" name="libroId" value="@Model.LibroID" />
+                <button type="submit" class="btn btn-primary">Realizar Préstamo</button>
+            </form>
+        }
+    </div>
+}
+else
+{
+    <div class="alert alert-danger">El modelo no está disponible.</div>
+}
