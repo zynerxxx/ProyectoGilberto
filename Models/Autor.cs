@@ -9,5 +9,8 @@ namespace BibliotecaMVC.Models
         public required string Apellido { get; set; }
         public required string Nacionalidad { get; set; }
         public DateTime? FechaNacimiento { get; set; }
+
+        // Relación con libros
+        public ICollection<Libro>? Libros { get; set; } // Relación de navegación
     }
 }

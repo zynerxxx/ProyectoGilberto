@@ -16,6 +16,7 @@
 
 <form asp-action="Create" method="post">
     <input type="hidden" asp-for="LibroID" />
+    <input type="hidden" name="returnUrl" value="@ViewBag.ReturnUrl" /> <!-- Campo oculto para returnUrl -->
     <div class="form-group">
         <label asp-for="FechaDevolucion" class="control-label">Fecha de Devolución</label>
         <input asp-for="FechaDevolucion" class="form-control" type="date" min="@DateTime.Now.ToString("yyyy-MM-dd")" />
@@ -32,7 +33,7 @@
     }
 
     <div class="form-group">
+        <a href="@ViewBag.ReturnUrl" class="btn btn-secondary">Cancelar</a> <!-- Usar returnUrl para redirigir -->
         <button type="submit" class="btn btn-primary">Confirmar</button>
-        <a asp-action="Index" asp-controller="Libros" class="btn btn-secondary">Cancelar</a>
     </div>
 </form>

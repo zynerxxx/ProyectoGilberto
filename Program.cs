@@ -50,7 +50,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-app.UseAuthentication(); // Agregar autenticación
+app.UseAuthentication(); // Este middleware debe estar antes de UseAuthorization
 app.UseAuthorization();
 
 app.MapControllerRoute(

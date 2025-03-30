@@ -36,7 +36,7 @@ namespace BibliotecaMVC.Controllers
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.NombreUsuario),
-                    new Claim(ClaimTypes.Role, user.Rol)
+                    new Claim(ClaimTypes.Role, user.Rol) // Asegúrate de que el rol se asigna correctamente
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);

@@ -1,24 +1,24 @@
 @model BibliotecaMVC.Models.Libro
 
-<h2>Crear Libro</h2>
+<h2 class="text-primary">Crear Libro</h2>
 
-<form asp-action="Create">
-    <div class="form-group">
+<form asp-action="Create" class="bg-white p-4 rounded shadow-sm mt-3"> <!-- Agregar margen superior al formulario -->
+    <div class="form-group mb-3">
         <label asp-for="Titulo" class="control-label"></label>
         <input asp-for="Titulo" class="form-control" />
         <span asp-validation-for="Titulo" class="text-danger"></span>
     </div>
-    <div class="form-group">
+    <div class="form-group mb-3">
         <label asp-for="ISBN" class="control-label"></label>
         <input asp-for="ISBN" class="form-control" />
         <span asp-validation-for="ISBN" class="text-danger"></span>
     </div>
-    <div class="form-group">
+    <div class="form-group mb-3">
         <label asp-for="Editorial" class="control-label"></label>
         <input asp-for="Editorial" class="form-control" />
         <span asp-validation-for="Editorial" class="text-danger"></span>
     </div>
-    <div class="form-group">
+    <div class="form-group mb-3">
         <label asp-for="AutorID" class="control-label">Autor</label>
         <select asp-for="AutorID" class="form-control">
             <option value="">Seleccione un autor</option>
@@ -32,7 +32,7 @@
         </select>
         <span asp-validation-for="AutorID" class="text-danger"></span>
     </div>
-    <div class="form-group">
+    <div class="form-group mb-3">
         <label asp-for="CategoriaID" class="control-label">Categoría</label>
         <select asp-for="CategoriaID" class="form-control">
             <option value="">Seleccione una categoría</option>
@@ -46,12 +46,12 @@
         </select>
         <span asp-validation-for="CategoriaID" class="text-danger"></span>
     </div>
-    <div class="form-group">
+    <div class="form-group mb-3">
         <label asp-for="NumeroCopias" class="control-label"></label>
         <input asp-for="NumeroCopias" class="form-control" />
         <span asp-validation-for="NumeroCopias" class="text-danger"></span>
     </div>
-    <div class="form-group">
+    <div class="form-group mt-3"> <!-- Agregar margen superior a los botones -->
         <input type="submit" value="Crear" class="btn btn-primary" />
         <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
     </div>

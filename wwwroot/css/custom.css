@@ -1,0 +1,252 @@
+/* Estilo general */
+body {
+    background-color: #f4fff877; /* Fondo principal */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000F08; /* Texto claro */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1C3738; /* Gunmetal */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #F4FFF8 !important; /* Texto claro */
+}
+
+.nav-link {
+    color: #F4FFF8 !important; /* Texto claro */
+}
+
+.nav-link:hover {
+    color: #8BAAAD !important; /* Cadet Gray */
+}
+
+.navbar-text {
+    color: #F4FFF8 !important; /* Texto claro */
+}
+
+/* Estilo para el saludo y botones en la barra de navegación */
+.navbar .user-info {
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+    gap: 10px; /* Espaciado entre el texto y el botón */
+    color: #F4FFF8; /* Texto claro */
+    font-size: 1rem; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    line-height: 1; /* Asegurar altura uniforme */
+}
+
+.navbar .user-info span {
+    margin: 0; /* Eliminar márgenes adicionales */
+    padding: 0; /* Eliminar relleno adicional */
+}
+
+.navbar .user-info .btn {
+    padding: 5px 15px; /* Espaciado interno */
+    font-size: 0.9rem; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    line-height: 1; /* Asegurar altura uniforme */
+}
+
+.navbar .user-info .btn-primary {
+    background-color: #8BAAAD; /* Cadet Gray */
+    border-color: #8BAAAD;
+    color: #000F08; /* Texto oscuro */
+}
+
+.navbar .user-info .btn-primary:hover {
+    background-color: #4D4847; /* Davy's Gray */
+    border-color: #4D4847;
+    color: #F4FFF8; /* Texto claro */
+}
+
+.navbar .user-info .btn-danger {
+    background-color: #800020; /* Rojo */
+    border-color: #800020;
+    color: #F4FFF8; /* Texto claro */
+}
+
+.navbar .user-info .btn-danger:hover {
+    background-color: #800020a2; /* Rojo más oscuro */
+    border-color: #800020a2;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #8BAAAD; /* Cadet Gray */
+    border-color: #8BAAAD;
+    color: #000F08; /* Texto oscuro */
+}
+
+.btn-primary:hover {
+    background-color: #4D4847; /* Davy's Gray */
+    border-color: #4D4847;
+    color: #F4FFF8; /* Texto claro */
+}
+
+.btn-secondary {
+    background-color: #4D4847; /* Davy's Gray */
+    border-color: #4D4847;
+    color: #F4FFF8; /* Texto claro */
+}
+
+.btn-secondary:hover {
+    background-color: #1C3738; /* Gunmetal */
+    border-color: #1C3738;
+}
+
+/* Botones con margen superior */
+.btn {
+    margin-top: 1rem; /* Agregar un margen superior a todos los botones */
+}
+
+/* Botones de acción específicos */
+.btn-info {
+    background-color: #1C3738; /* Cadet Gray */
+    border-color: #1C3738;
+    color: #F4FFF8; /* Texto oscuro */
+}
+
+.btn-info:hover {
+    background-color: #0e2320af; /* Davy's Gray */
+    border-color: #0e2320af;
+    color: #F4FFF8; /* Texto claro */
+}
+
+.btn-warning {
+    background-color: #4D4847; /* Amarillo */
+    border-color: #4D4847;
+    color: #F4FFF8; /* Texto oscuro */
+}
+
+.btn-warning:hover {
+    background-color: #7a7c7a; /* Amarillo más oscuro */
+    border-color: #7a7c7a;
+    color: #F4FFF8; /* Texto claro */
+}
+
+.btn-danger {
+    background-color: #800020; /* Rojo */
+    border-color: #800020;
+    color: #F4FFF8; /* Texto claro */
+}
+
+.btn-danger:hover {
+    background-color: #800020a2; /* Rojo más oscuro */
+    border-color: #800020a2;
+}
+
+/* Botones de éxito */
+.btn-success {
+    background-color: #28A745; /* Verde */
+    border-color: #28A745;
+    color: #F4FFF8; /* Texto claro */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Verde más oscuro */
+    border-color: #218838;
+    color: #F4FFF8; /* Texto claro */
+}
+
+/* Ocultar botones de edición y eliminación para usuarios no administradores */
+.non-admin .btn-warning,
+.non-admin .btn-danger {
+    display: none;
+}
+
+/* Estilo uniforme para todas las tablas */
+.table {
+    width: 100%; /* Asegurar que la tabla ocupe todo el ancho disponible */
+    border-collapse: collapse; /* Eliminar espacios entre bordes */
+    background-color: #F4FFF8; /* Fondo claro */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Evitar desbordamiento */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    color: #000F08; /* Texto oscuro */
+    margin-top: 1rem; /* Espaciado superior */
+}
+
+/* Centrar el contenido de las tablas */
+.table th, .table td {
+    text-align: center; /* Centrar texto horizontalmente */
+    vertical-align: middle; /* Centrar texto verticalmente */
+}
+
+.table th {
+    background-color: #1C3738; /* Fondo oscuro */
+    color: #F4FFF8; /* Texto claro */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+}
+
+.table td {
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    vertical-align: middle; /* Centrar verticalmente */
+    color: #4D4847; /* Texto gris */
+}
+
+/* Centrar los botones dentro de las celdas */
+.table td > * {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    gap: 5px; /* Espaciado entre botones */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9; /* Fondo alternado para filas */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e6f7ff; /* Fondo al pasar el cursor */
+}
+
+/* Botones dentro de las tablas */
+.table .btn {
+    min-width: 100px; /* Ancho mínimo uniforme */
+    padding: 5px 10px; /* Espaciado interno uniforme */
+    font-size: 0.9rem; /* Tamaño de fuente uniforme */
+    display: inline-block; /* Asegurar que los botones se comporten como elementos en línea */
+}
+
+/* Formularios */
+.form-control {
+    border-radius: 0.25rem;
+    background-color: #F4FFF8; /* Mint Cream */
+    color: #000F08; /* Texto oscuro */
+    border: 1px solid #4D4847; /* Davy's Gray */
+}
+
+.form-control:focus {
+    border-color: #8BAAAD; /* Cadet Gray */
+    box-shadow: 0 0 0 0.2rem rgba(139, 170, 173, 0.25); /* Cadet Gray */
+}
+
+.form-group {
+    margin-bottom: 1.5rem; /* Aumentar el espacio entre los campos del formulario */
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #000F08; /* Texto claro */
+}
+
+/* Alertas */
+.alert {
+    border-radius: 0.25rem;
+}
+
+.alert-success {
+    background-color: #8BAAAD; /* Cadet Gray */
+    color: #000F08; /* Texto oscuro */
+}
+
+.alert-danger {
+    background-color: #FF5252; /* Rojo */
+    color: #F4FFF8; /* Texto claro */
+}

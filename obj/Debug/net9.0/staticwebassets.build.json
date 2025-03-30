@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IAnRlx+0GvkytOsMj4B6ZpFNMQKTizt9hEEs06ejvZI=",
+  "Hash": "6WPwWol8VEqKpqAOhNsHevfKTR11Jcejx3coXps9uR8=",
   "Source": "BibliotecaMVC",
   "BasePath": "_content/BibliotecaMVC",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\obj\\Debug\\net9.0\\compressed\\08lsfsop94-sqp5w1vhwn.gz",
+      "SourceId": "BibliotecaMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/BibliotecaMVC",
+      "RelativePath": "css/custom#[.{fingerprint=sqp5w1vhwn}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\wwwroot\\css\\custom.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "k936fvxnhi",
+      "Integrity": "+I5/n2h2Cpn5YMJ/B7Mx+8l1rUfiA4vbE2xG+AgOv7Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\wwwroot\\css\\custom.css"
+    },
     {
       "Identity": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\obj\\Debug\\net9.0\\compressed\\0bfsnivt53-mlv21k5csn.gz",
       "SourceId": "BibliotecaMVC",
@@ -1401,6 +1422,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\BibliotecaMVC.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\wwwroot\\css\\custom.css",
+      "SourceId": "BibliotecaMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\wwwroot\\",
+      "BasePath": "_content/BibliotecaMVC",
+      "RelativePath": "css/custom#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sqp5w1vhwn",
+      "Integrity": "bPoL09aClAe4hlUHPD1WaDEpMU1vj2dxS6QV4/NF6Zs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\custom.css"
     },
     {
       "Identity": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\wwwroot\\css\\site.css",
@@ -3320,6 +3362,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-pDSCawyyZ2wvy5i7+qKbFD9SxclB3RRPOxqf3tnpSI4="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom.css",
+      "AssetFile": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\obj\\Debug\\net9.0\\compressed\\08lsfsop94-sqp5w1vhwn.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000607164542"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1646"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+I5/n2h2Cpn5YMJ/B7Mx+8l1rUfiA4vbE2xG+AgOv7Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Mar 2025 20:38:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"bPoL09aClAe4hlUHPD1WaDEpMU1vj2dxS6QV4/NF6Zs=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bPoL09aClAe4hlUHPD1WaDEpMU1vj2dxS6QV4/NF6Zs="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom.css",
+      "AssetFile": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\wwwroot\\css\\custom.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6667"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bPoL09aClAe4hlUHPD1WaDEpMU1vj2dxS6QV4/NF6Zs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Mar 2025 20:38:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bPoL09aClAe4hlUHPD1WaDEpMU1vj2dxS6QV4/NF6Zs="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom.css.gz",
+      "AssetFile": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\obj\\Debug\\net9.0\\compressed\\08lsfsop94-sqp5w1vhwn.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1646"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+I5/n2h2Cpn5YMJ/B7Mx+8l1rUfiA4vbE2xG+AgOv7Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Mar 2025 20:38:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+I5/n2h2Cpn5YMJ/B7Mx+8l1rUfiA4vbE2xG+AgOv7Q="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom.sqp5w1vhwn.css",
+      "AssetFile": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\obj\\Debug\\net9.0\\compressed\\08lsfsop94-sqp5w1vhwn.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000607164542"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1646"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+I5/n2h2Cpn5YMJ/B7Mx+8l1rUfiA4vbE2xG+AgOv7Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Mar 2025 20:38:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"bPoL09aClAe4hlUHPD1WaDEpMU1vj2dxS6QV4/NF6Zs=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sqp5w1vhwn"
+        },
+        {
+          "Name": "label",
+          "Value": "css/custom.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bPoL09aClAe4hlUHPD1WaDEpMU1vj2dxS6QV4/NF6Zs="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom.sqp5w1vhwn.css",
+      "AssetFile": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\wwwroot\\css\\custom.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6667"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bPoL09aClAe4hlUHPD1WaDEpMU1vj2dxS6QV4/NF6Zs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Mar 2025 20:38:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sqp5w1vhwn"
+        },
+        {
+          "Name": "label",
+          "Value": "css/custom.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bPoL09aClAe4hlUHPD1WaDEpMU1vj2dxS6QV4/NF6Zs="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom.sqp5w1vhwn.css.gz",
+      "AssetFile": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\obj\\Debug\\net9.0\\compressed\\08lsfsop94-sqp5w1vhwn.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1646"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+I5/n2h2Cpn5YMJ/B7Mx+8l1rUfiA4vbE2xG+AgOv7Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Mar 2025 20:38:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sqp5w1vhwn"
+        },
+        {
+          "Name": "label",
+          "Value": "css/custom.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+I5/n2h2Cpn5YMJ/B7Mx+8l1rUfiA4vbE2xG+AgOv7Q="
         }
       ]
     },

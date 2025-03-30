@@ -1,0 +1,24 @@
+@model BibliotecaMVC.Models.Autor
+
+<h2>Eliminar Autor</h2>
+
+<h3>¿Está seguro de que desea eliminar este autor?</h3>
+<div>
+    <h4>Autor</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.Nombre</dd>
+
+        <dt class="col-sm-2">Apellido</dt>
+        <dd class="col-sm-10">@Model.Apellido</dd>
+
+        <dt class="col-sm-2">Nacionalidad</dt>
+        <dd class="col-sm-10">@Model.Nacionalidad</dd>
+    </dl>
+</div>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="AutorID" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

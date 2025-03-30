@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\BibliotecaMVC.5swg1l4ciz.bundle.scp.css"
     },
     {
+      "Id": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\wwwroot\\css\\custom.css",
+      "PackagePath": "staticwebassets\\css\\custom.css"
+    },
+    {
       "Id": "D:\\Documentos\\GitHub\\GilProyecto\\BibliotecaMVC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

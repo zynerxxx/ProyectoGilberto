@@ -27,7 +27,7 @@ namespace BibliotecaMVC.Controllers
         }
 
         [Authorize]
-        public IActionResult Create(int libroId)
+        public IActionResult Create(int libroId, string? returnUrl = null)
         {
             var libro = _context.Libros.FirstOrDefault(l => l.LibroID == libroId);
             if (libro == null) return NotFound();
@@ -39,6 +39,16 @@ namespace BibliotecaMVC.Controllers
             }
 
             ViewBag.LibroTitulo = libro.Titulo;
+
+            // Validar y decodificar returnUrl
+            if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+            {
+                ViewBag.ReturnUrl = returnUrl;
+            }
+            else
+            {
+                ViewBag.ReturnUrl = Url.Action("Index", "Libros");
+            }
 
             // Si el usuario es Admin, cargar la lista de usuarios
             if (User.IsInRole("Admin"))
@@ -58,7 +68,7 @@ namespace BibliotecaMVC.Controllers
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LibroID,FechaDevolucion,UsuarioID")] Prestamo prestamo)
+        public async Task<IActionResult> Create([Bind("LibroID,FechaDevolucion,UsuarioID")] Prestamo prestamo, string? returnUrl = null)
         {
             if (ModelState.IsValid)
             {
@@ -99,6 +109,8 @@ namespace BibliotecaMVC.Controllers
                 await _context.SaveChangesAsync();
 
                 TempData["Success"] = "El préstamo se ha realizado correctamente.";
+
+                // Redirigir a la página de Préstamos
                 return RedirectToAction("Index", "Prestamos");
             }
 
@@ -114,6 +126,7 @@ namespace BibliotecaMVC.Controllers
                     .ToList();
             }
 
+            ViewBag.ReturnUrl = returnUrl; // Pasar la URL de retorno a la vista
             return View(prestamo);
         }
 

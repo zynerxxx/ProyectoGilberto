@@ -23,7 +23,7 @@ namespace BibliotecaMVC.Models
 
         [Column("Rol")]
         [Required(ErrorMessage = "El campo Rol es obligatorio.")]
-        public string Rol { get; set; } = "Usuario";
+        public string Rol { get; set; } = "Usuario"; // Valor predeterminado
 
         [Column("FechaRegistro")]
         public DateTime FechaRegistro { get; set; }

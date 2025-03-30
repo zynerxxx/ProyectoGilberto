@@ -1,6 +1,6 @@
 @model IEnumerable<BibliotecaMVC.Models.Libro>
 
-<h2>Libros</h2>
+<h2 class="text-primary">Libros</h2>
 
 @if (User.IsInRole("Admin"))
 {
@@ -9,7 +9,8 @@
     </p>
 }
 
-<table class="table">
+
+<table class="table table-striped table-hover">
     <thead>
         <tr>
             <th>Título</th>
@@ -26,11 +27,11 @@
                 <td>@item.ISBN</td>
                 <td>@item.Editorial</td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@item.LibroID" class="btn btn-info">Detalles</a>
+                    <a asp-action="Details" asp-route-id="@item.LibroID" class="btn btn-info btn-sm">Detalles</a>
                     @if (User.IsInRole("Admin"))
                     {
-                        <a asp-action="Edit" asp-route-id="@item.LibroID" class="btn btn-warning">Editar</a>
-                        <a asp-action="Delete" asp-route-id="@item.LibroID" class="btn btn-danger">Eliminar</a>
+                        <a asp-action="Edit" asp-route-id="@item.LibroID" class="btn btn-warning btn-sm">Editar</a>
+                        <a asp-action="Delete" asp-route-id="@item.LibroID" class="btn btn-danger btn-sm">Eliminar</a>
                     }
                 </td>
             </tr>

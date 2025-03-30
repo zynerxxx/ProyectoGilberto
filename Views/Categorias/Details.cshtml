@@ -1,0 +1,62 @@
+@model BibliotecaMVC.Models.Categoria
+
+<h2>Detalles de la Categoría</h2>
+
+<div>
+    <h4>Categoría</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.Nombre</dd>
+
+        <dt class="col-sm-2">Descripción</dt>
+        <dd class="col-sm-10">@Model.Descripcion</dd>
+    </dl>
+</div>
+
+<h4>Libros en esta Categoría</h4>
+@if (Model.Libros != null && Model.Libros.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>ISBN</th>
+                <th>Editorial</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var libro in Model.Libros)
+            {
+                <tr>
+                    <td>@libro.Titulo</td>
+                    <td>@libro.ISBN</td>
+                    <td>@libro.Editorial</td>
+                    <td>
+                        @if (User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            <form asp-action="Create" asp-controller="Prestamos" method="get" class="d-inline">
+                                <input type="hidden" name="libroId" value="@libro.LibroID" />
+                                <input type="hidden" name="returnUrl" value="@Url.Action("Details", "Categorias", new { id = Model.CategoriaID })" />
+                                <button type="submit" class="btn btn-primary btn-sm">Realizar Préstamo</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <span class="text-muted">Inicia sesión para realizar un préstamo</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay libros en esta categoría.</p>
+}
+
+<p>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</p>
