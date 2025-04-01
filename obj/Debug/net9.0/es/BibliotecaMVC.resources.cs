@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BibliotecaMVC")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute(" ")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ab365015a13044aadec2ab2caec8d66b6ff5adc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83bf8e80df358f5c0253500d7fe5451d4062d6df")]
 [assembly: System.Reflection.AssemblyProductAttribute("BibliotecaMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BibliotecaMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
