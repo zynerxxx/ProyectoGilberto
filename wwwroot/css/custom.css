@@ -5,6 +5,14 @@ body {
     color: #000F08; /* Texto claro */
 }
 
+.text-primary{
+    color: black !important; /* Cambiar a un color naranja */
+}
+
+.text-custom {
+    color: black; /* Cambiar a un color naranja */
+}
+
 /* Navbar */
 .navbar {
     background-color: #1C3738; /* Gunmetal */
@@ -141,14 +149,14 @@ body {
 
 /* Botones de éxito */
 .btn-success {
-    background-color: #28A745; /* Verde */
-    border-color: #28A745;
+    background-color: #085555; /* Verde */
+    border-color: #085555;
     color: #F4FFF8; /* Texto claro */
 }
 
 .btn-success:hover {
-    background-color: #218838; /* Verde más oscuro */
-    border-color: #218838;
+    background-color: #032424; /* Verde más oscuro */
+    border-color: #032424;
     color: #F4FFF8; /* Texto claro */
 }
 

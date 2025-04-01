@@ -130,6 +130,37 @@ namespace BibliotecaMVC.Controllers
             return View(prestamo);
         }
 
+        [Authorize] // Permitir acceso a usuarios autenticados
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null) return NotFound();
+
+            var prestamo = await _context.Prestamos
+                .Include(p => p.Libro) // Incluir información del libro
+                .Include(p => p.Usuario) // Incluir información del usuario
+                .FirstOrDefaultAsync(p => p.PrestamoID == id);
+
+            if (prestamo == null) return NotFound();
+
+            // Si el usuario no es Admin, verificar que el préstamo pertenece al usuario autenticado
+            if (!User.IsInRole("Admin"))
+            {
+                // Verificar que el usuario autenticado no sea nulo
+                if (User.Identity == null || string.IsNullOrEmpty(User.Identity.Name))
+                {
+                    return Forbid(); // Denegar acceso si no hay un usuario autenticado
+                }
+
+                // Verificar que el préstamo tenga un usuario asociado
+                if (prestamo.Usuario == null || prestamo.Usuario.NombreUsuario != User.Identity.Name)
+                {
+                    return Forbid(); // Denegar acceso si el préstamo no pertenece al usuario autenticado
+                }
+            }
+
+            return View(prestamo);
+        }
+
         [Authorize(Roles = "Admin")] // Solo Admin puede editar
         public async Task<IActionResult> Edit(int? id)
         {

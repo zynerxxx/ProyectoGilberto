@@ -1,0 +1,22 @@
+@model BibliotecaMVC.Models.Prestamo
+
+<h2 style="color: black;">Detalles del Préstamo</h2>
+
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-dark text-white">
+        <h5>Información del Préstamo</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Libro:</strong> @Model.Libro?.Titulo</p>
+        <p><strong>Usuario:</strong> @Model.Usuario?.Nombre (@Model.Usuario?.NombreUsuario)</p>
+        <p><strong>Fecha de Préstamo:</strong> @Model.FechaPrestamo.ToShortDateString()</p>
+        <p><strong>Fecha de Devolución:</strong> @Model.FechaDevolucion?.ToShortDateString()</p>
+        <p><strong>Estado:</strong> 
+            <span class="badge @(Model.Estado == "Devuelto" ? "bg-success" : "bg-warning text-dark")">
+                @Model.Estado
+            </span>
+        </p>
+    </div>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Volver a la lista</a>

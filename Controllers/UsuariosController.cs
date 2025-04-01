@@ -34,51 +34,33 @@ namespace BibliotecaMVC.Controllers
         }
 
         // GET: Usuarios/Create
+        [AllowAnonymous] // Permitir acceso sin autenticación
         public IActionResult Create()
         {
-            ViewBag.Roles = _context.Usuarios.Select(u => u.Rol).Distinct().ToList(); // Obtener roles únicos
             return View();
         }
 
         // POST: Usuarios/Create
         [HttpPost]
+        [AllowAnonymous] // Permitir acceso sin autenticación
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nombre,NombreUsuario,Contraseña")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Nombre,NombreUsuario,Contraseña,Rol")] Usuario usuario)
         {
-            try
+            if (_context.Usuarios.Any(u => u.NombreUsuario == usuario.NombreUsuario))
             {
-                if (ModelState.IsValid)
-                {
-                    usuario.Rol = "Usuario"; // Asignar el rol predeterminado
-                    usuario.FechaRegistro = DateTime.Now; // Establecer la fecha de registro
-                    _context.Add(usuario);
-
-                    // Mensaje de depuración
-                    Console.WriteLine($"Intentando crear usuario: Nombre={usuario.Nombre}, NombreUsuario={usuario.NombreUsuario}, Rol={usuario.Rol}");
-
-                    await _context.SaveChangesAsync();
-
-                    // Mensaje de éxito
-                    ViewBag.Message = "Creación Exitosa";
-                    ViewBag.IsSuccess = true;
-
-                    // Limpiar el modelo para que los campos se vacíen
-                    ModelState.Clear();
-                    return View();
-                }
-                else
-                {
-                    Console.WriteLine("ModelState no es válido.");
-                }
-            }
-            catch (Exception ex)
-            {
-                // Mensaje de error
-                Console.WriteLine($"Error al crear usuario: {ex.Message}");
-                ViewBag.Message = $"Error de creación (código de error: {ex.HResult})";
-                ViewBag.IsSuccess = false;
+                ModelState.AddModelError("NombreUsuario", "El nombre de usuario ya está en uso. Por favor, elige otro.");
+                return View(usuario);
             }
 
+            if (ModelState.IsValid)
+            {
+                usuario.FechaRegistro = DateTime.Now;
+                usuario.Rol = "Usuario"; // Asignar el rol predeterminado
+                _context.Add(usuario);
+                await _context.SaveChangesAsync();
+                TempData["Success"] = "Usuario creado exitosamente. Ahora puedes iniciar sesión.";
+                return RedirectToAction("Login", "Account");
+            }
             return View(usuario);
         }
 
